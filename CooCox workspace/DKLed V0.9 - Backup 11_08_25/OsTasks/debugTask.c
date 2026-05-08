@@ -1493,7 +1493,7 @@ Jump_To_Action_Label:
 					break; //DS_ANS_SERVO_SET
 				case DS_ANS_SET_LED_TYPE: //M06
 					// в DS_Param находится значение типа светодиодов - 0x122812 для WS или 0x236812 для SK, для среднего
-					  if ((DS_Param==0x122812)){
+					  if ((DS_Param==0x122812)){// M6 P WS2812
 						  //if (~LED_control_type & 1) stop_servos();
 						  //LED_control_type &=128;
 						  //LED_control_type |= 1;
@@ -1501,7 +1501,7 @@ Jump_To_Action_Label:
 						  //WS2812_IO_Low = 0x00;
 						  WS2812_Timer_reinit(29,  8, 17);//ws2812 freq
 						  goto SET_LED_Type_LedOnly_Parameters;
-					  } else if (DS_Param==0x236812){
+					  } else if (DS_Param==0x236812){// M6 P SK6812
 						  //if (~LED_control_type & 1) stop_servos();
 						  //LED_control_type &=128;
 						  //LED_control_type |= 1;
@@ -1509,7 +1509,7 @@ Jump_To_Action_Label:
 						  //WS2812_IO_Low = 0x00;
 						  WS2812_Timer_reinit(29,  6, 12); //sk6812 freq
 						  goto SET_LED_Type_LedOnly_Parameters;
-					  } else if ((DS_Param==0x12813)){
+					  } else if ((DS_Param==0x122813)){// M6 P WS2813
 					  						  //if (~LED_control_type & 1) stop_servos();
 					  						  //LED_control_type &=128;
 					  						  //LED_control_type |= 1;
@@ -1525,7 +1525,7 @@ SET_LED_Type_LedOnly_Parameters:
 						  LED_control_type |= 1;
 						  WS2812_IO_High = 0xFF;
 						  WS2812_IO_Low = 0x00;
-					  } else if (DS_Param==0x2d2490){ //аналоговые сервы
+					  } else if (DS_Param==0x2d2490){ //аналоговые сервы // M6 P SDSG90
 						  if (~LED_control_type & 2) {
 							  stop_servos();
 							  LED_control_type &=128;
@@ -1536,13 +1536,13 @@ SET_LED_Type_LedOnly_Parameters:
 							  Servo_Resolution_default = 512; //разрешение
 							  //UpdateServos();
 						  }
-					  } else if (DS_Param==0x12002d){ //ws2812+аналоговые сервы
+					  } else if (DS_Param==0x12002d){ //ws2812+аналоговые сервы // M6 P WS00SD
 						  WS2812_Timer_reinit(29,  8, 17);//ws2812 freq
 						  goto SET_LED_Type_LED_and_Servo_Parameters;
-					  } else if (DS_Param==0x12132d){ //ws2813+аналоговые сервы
+					  } else if (DS_Param==0x12132d){ //ws2813+аналоговые сервы // M6 P WS13SD
 						  WS2812_Timer_reinit(27,  4, 16);//ws2813 freq
 						  goto SET_LED_Type_LED_and_Servo_Parameters;
-					  } else if (DS_Param==0x23002d){ //sk6812+аналоговые сервы
+					  } else if (DS_Param==0x23002d){ //sk6812+аналоговые сервы // M6 P SK00SD
 						  WS2812_Timer_reinit(29,  6, 12); //sk6812 freq
 SET_LED_Type_LED_and_Servo_Parameters:
 						  if ((LED_control_type & 3) != 3) {
@@ -1557,8 +1557,8 @@ SET_LED_Type_LED_and_Servo_Parameters:
 							  Servo_Resolution_default = 512; //разрешение
 							  //UpdateServos();
 						  }
-					  } else if ((DS_Param & 0xff000000)==0xfc000000){//прямой контроль количества тиков
-						  DS_comm_num = (DS_Param>>16)&0xff; //всего тиков (частота 24 МГц или 42 нс на тик
+					  } else if ((DS_Param & 0xff000000)==0xfc000000){//прямой контроль количества тиков // M6 P FC xx yy zz (ticks total, 1st tick, 2nd tick)
+						  DS_comm_num = (DS_Param>>16)&0xff; //всего тиков (частота 24 МГц или 42 нс на тик)
 						  DS_RGB_counter = (DS_Param>>8)&0xff; //тик первого перескока
 						  a8 = DS_Param&0xff; //тик второго перескока
 						  DS_comm_num = (DS_comm_num > 4) ? DS_comm_num : 4;

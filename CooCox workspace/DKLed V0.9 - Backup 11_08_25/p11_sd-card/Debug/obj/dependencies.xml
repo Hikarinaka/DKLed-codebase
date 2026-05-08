@@ -71,13 +71,6 @@
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
          <include file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_type.h"/>
       </source>
-      <source file="..\..\..\descriptor_S-code\descript_S.c" lastModified="19898da9211">
-         <include file="..\..\..\descriptor_S-code\descript_S.h"/>
-         <include file="..\..\..\includes.h"/>
-         <include file="..\..\..\WS2812_vet\init_ws.h"/>
-         <include file="..\..\..\OsTasks\debugTask.h"/>
-         <include file="..\..\..\dbgu\I2C_c.h"/>
-      </source>
       <source file="..\..\..\CoOS\kernel\OsCore.h" lastModified="15a24749ad0">
          <include file="..\..\..\CoOS\kernel\CoOS.h"/>
       </source>
@@ -294,36 +287,36 @@
       </source>
       <source file="..\..\..\CoOS\portable\OsArch.h" lastModified="15a24749ad0">
       </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_flash.h" lastModified="18044dc277b">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="16d1cf4c830">
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsFlag.h" lastModified="15a24749ad0">
+      <source file="..\..\..\stm_lib\inc\stm32f10x_flash.h" lastModified="18044dc277b">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
       <source file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_core.h" lastModified="12ecd641660">
       </source>
-      <source file="..\..\..\dbgu\I2C_c.h" lastModified="198904f49bf">
+      <source file="..\..\..\CoOS\kernel\OsFlag.h" lastModified="15a24749ad0">
       </source>
       <source file="..\..\..\CoOS\kernel\CoOS.h" lastModified="15a24749ad0">
          <include file="..\..\..\CoOS\kernel\OsConfig.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\queue.c" lastModified="15a24749ad0">
-         <include file="..\..\..\CoOS\kernel\coocox.h"/>
+      <source file="..\..\..\dbgu\I2C_c.h" lastModified="198904f49bf">
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_crc.h" lastModified="16d215a6cf5">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="15a24749ad0">
-      </source>
-      <source file="..\..\..\CoOS\kernel\sem.c" lastModified="15a24749ad0">
+      <source file="..\..\..\CoOS\kernel\queue.c" lastModified="15a24749ad0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
+      </source>
+      <source file="..\..\..\CoOS\kernel\OsKernelHeap.h" lastModified="15a24749ad0">
       </source>
       <source file="..\..\..\WS2812_vet\init_ws.h" lastModified="197ecde5456">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
          <include file="..\..\..\includes.h"/>
+      </source>
+      <source file="..\..\..\CoOS\kernel\sem.c" lastModified="15a24749ad0">
+         <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
       <source file="..\..\..\usb\usb_endp.c" lastModified="16d7f7be5c5">
          <include file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_lib.h"/>
@@ -352,10 +345,10 @@
       <source file="..\..\..\stm_lib\inc\stm32f10x_exti.h" lastModified="15f31ef47f0">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
+      <source file="..\..\..\OsTasks\inputsTask.h" lastModified="1900dd40b40">
+      </source>
       <source file="..\..\..\exceptions.c" lastModified="15a249c9d00">
          <include file="..\..\..\includes.h"/>
-      </source>
-      <source file="..\..\..\OsTasks\inputsTask.h" lastModified="1900dd40b40">
       </source>
       <source file="..\..\..\usb\usb_istr.c" lastModified="135380d05c0">
          <include file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_lib.h"/>
@@ -365,18 +358,18 @@
       </source>
       <source file="..\..\..\usb\usb_conf.h" lastModified="1353860bb70">
       </source>
+      <source file="..\..\..\CoOS\kernel\time.c" lastModified="15a24749ad0">
+         <include file="..\..\..\CoOS\kernel\coocox.h"/>
+      </source>
       <source file="..\..\..\dbgu\dbgu.c" lastModified="19898d84862">
          <include file="..\..\..\includes.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\CoOS\kernel\time.c" lastModified="15a24749ad0">
-         <include file="..\..\..\CoOS\kernel\coocox.h"/>
+      <source file="..\..\..\OsTasks\inputsTask.c" lastModified="1979d73e5de">
+         <include file="..\..\..\includes.h"/>
       </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_crc.c" lastModified="16d2166ca63">
          <include file="..\..\..\stm_lib\inc\stm32f10x_crc.h"/>
-      </source>
-      <source file="..\..\..\OsTasks\inputsTask.c" lastModified="1979d73e5de">
-         <include file="..\..\..\includes.h"/>
       </source>
       <source file="..\..\..\dbgu\USB_c.h" lastModified="1982d0ac951">
       </source>
@@ -385,14 +378,14 @@
       </source>
       <source file="..\..\..\CoOS\kernel\OsTimer.h" lastModified="15a24749ad0">
       </source>
-      <source file="..\..\..\CoOS\kernel\utility.c" lastModified="15a24749ad0">
-         <include file="..\..\..\CoOS\kernel\coocox.h"/>
-      </source>
-      <source file="..\..\..\CoOS\kernel\OsTime.h" lastModified="15a24749ad0">
-      </source>
       <source file="..\..\..\dbgu\USB_c.c" lastModified="198696a8088">
          <include file="..\..\..\includes.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\CoOS\kernel\OsTime.h" lastModified="15a24749ad0">
+      </source>
+      <source file="..\..\..\CoOS\kernel\utility.c" lastModified="15a24749ad0">
+         <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
       <source file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_lib.h" lastModified="12ecd641a48">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -429,21 +422,21 @@
       <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="15a2d8ec640">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
+      <source file="..\..\..\usb\usb_prop.h" lastModified="12ecd64e180">
+      </source>
       <source file="..\..\..\main.c" lastModified="19898daa050">
          <include file="..\..\..\includes.h"/>
-      </source>
-      <source file="..\..\..\usb\usb_prop.h" lastModified="12ecd64e180">
       </source>
       <source file="..\..\..\CoOS\kernel\OsMM.h" lastModified="15a24749ad0">
       </source>
       <source file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_int.h" lastModified="12ecd641660">
       </source>
+      <source file="..\..\..\CoOS\kernel\timer.c" lastModified="15a24749ad0">
+         <include file="..\..\..\CoOS\kernel\coocox.h"/>
+      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="18a1375231f">
          <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\CoOS\kernel\timer.c" lastModified="15a24749ad0">
-         <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
       <source file="..\..\..\usb\usb_prop.c" lastModified="135380d05c0">
          <include file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_lib.h"/>
@@ -478,17 +471,17 @@
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
+      <source file="..\..\..\usb\usb_desc.h" lastModified="12ecd64e180">
+      </source>
       <source file="..\..\..\CoOS\portable\arch.c" lastModified="189bf611ac0">
          <include file="..\..\..\CoOS\kernel\coocox.h"/>
       </source>
-      <source file="..\..\..\usb\usb_desc.h" lastModified="12ecd64e180">
+      <source file="..\..\..\STM32_USB-FS-Device_Driver\src\usb_init.c" lastModified="12ecd641660">
+         <include file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_lib.h"/>
       </source>
       <source file="..\..\..\file_functions.c" lastModified="180f7085359">
          <include file="..\..\..\file_functions.h"/>
          <include file="..\..\..\descriptor_S-code\descript_S.h"/>
-      </source>
-      <source file="..\..\..\STM32_USB-FS-Device_Driver\src\usb_init.c" lastModified="12ecd641660">
-         <include file="..\..\..\STM32_USB-FS-Device_Driver\inc\usb_lib.h"/>
       </source>
    </includePath>
 </dependencies>

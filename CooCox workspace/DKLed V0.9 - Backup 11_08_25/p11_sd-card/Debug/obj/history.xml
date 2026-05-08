@@ -55,8 +55,8 @@
       <target file="file_functions.o" lastModified="198988e05e3">
          <source file="..\..\..\file_functions.c" lastModified="180f7085359"/>
       </target>
-      <target file="debugTask.o" lastModified="19898dfba26">
-         <source file="..\..\..\OsTasks\debugTask.c" lastModified="19898dfaf5c"/>
+      <target file="debugTask.o" lastModified="19e09af7767">
+         <source file="..\..\..\OsTasks\debugTask.c" lastModified="19e09a80a5b"/>
       </target>
       <target file="arch.o" lastModified="18a488a1f6d">
          <source file="..\..\..\CoOS\portable\arch.c" lastModified="189bf611ac0"/>
@@ -88,8 +88,8 @@
       <target file="hw_config.o" lastModified="18a4889e107">
          <source file="..\..\..\usb\hw_config.c" lastModified="16d7f7bd9a6"/>
       </target>
-      <target file="descript_S.o" lastModified="19898dab32d">
-         <source file="..\..\..\descriptor_S-code\descript_S.c" lastModified="19898da8e29"/>
+      <target file="descript_S.o" lastModified="19e09af72e3">
+         <source file="..\..\..\descriptor_S-code\descript_S.c" lastModified="19898e0d233"/>
       </target>
       <target file="inputsTask.o" lastModified="198988def0d">
          <source file="..\..\..\OsTasks\inputsTask.c" lastModified="1979d73e5de"/>
@@ -106,11 +106,11 @@
       <target file="stm32f10x_rcc.o" lastModified="18a4889faf7">
          <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="16d1d157581"/>
       </target>
-      <target file="core.o" lastModified="18a4889c068">
-         <source file="..\..\..\CoOS\kernel\core.c" lastModified="15a24749ad0"/>
-      </target>
       <target file="otgd_fs_int.o" lastModified="18a488a0726">
          <source file="..\..\..\STM32_USB-FS-Device_Driver\src\otgd_fs_int.c" lastModified="12ecd641660"/>
+      </target>
+      <target file="core.o" lastModified="18a4889c068">
+         <source file="..\..\..\CoOS\kernel\core.c" lastModified="15a24749ad0"/>
       </target>
       <target file="kernelHeap.o" lastModified="18a4889bf9b">
          <source file="..\..\..\CoOS\kernel\kernelHeap.c" lastModified="15a24749ad0"/>
@@ -127,11 +127,11 @@
       <target file="stm32f10x_dma.o" lastModified="18a488a1e75">
          <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="16d1805fa4f"/>
       </target>
-      <target file="timings.o" lastModified="198988dfec0">
-         <source file="..\..\..\timings.c" lastModified="18a4a435315"/>
-      </target>
       <target file="flag.o" lastModified="18a488a18dd">
          <source file="..\..\..\CoOS\kernel\flag.c" lastModified="15a24749ad0"/>
+      </target>
+      <target file="timings.o" lastModified="198988dfec0">
+         <source file="..\..\..\timings.c" lastModified="18a4a435315"/>
       </target>
       <target file="init_ws.o" lastModified="198988decdb">
          <source file="..\..\..\WS2812_vet\init_ws.c" lastModified="1980276b924"/>
@@ -139,47 +139,47 @@
       <target file="usb_core.o" lastModified="18a4889b838">
          <source file="..\..\..\STM32_USB-FS-Device_Driver\src\usb_core.c" lastModified="12ecd641660"/>
       </target>
-      <target file="stdio.o" lastModified="18a488a0642">
-         <source file="..\..\..\dbgu\stdio.c" lastModified="1801aeb5a10"/>
-      </target>
       <target file="otgd_fs_cal.o" lastModified="18a488a0e03">
          <source file="..\..\..\STM32_USB-FS-Device_Driver\src\otgd_fs_cal.c" lastModified="12ecd641660"/>
       </target>
-      <target file="stm32f10x_crc.o" lastModified="18a4889f15a">
-         <source file="..\..\..\stm_lib\src\stm32f10x_crc.c" lastModified="16d2166ca63"/>
+      <target file="stdio.o" lastModified="18a488a0642">
+         <source file="..\..\..\dbgu\stdio.c" lastModified="1801aeb5a10"/>
       </target>
       <target file="ff.o" lastModified="18a488a1cfc">
          <source file="..\..\..\FatFs\ff.c" lastModified="16d1da4a3a7"/>
       </target>
+      <target file="stm32f10x_crc.o" lastModified="18a4889f15a">
+         <source file="..\..\..\stm_lib\src\stm32f10x_crc.c" lastModified="16d2166ca63"/>
+      </target>
       <target file="main.o" lastModified="19898dab519">
          <source file="..\..\..\main.c" lastModified="19898daa050"/>
-      </target>
-      <target file="exceptions.o" lastModified="198988dea06">
-         <source file="..\..\..\exceptions.c" lastModified="15a249c9d00"/>
-      </target>
-      <target file="mbox.o" lastModified="18a4889fbea">
-         <source file="..\..\..\CoOS\kernel\mbox.c" lastModified="15a24749ad0"/>
-      </target>
-      <target file="usb_int.o" lastModified="18a4889cd7e">
-         <source file="..\..\..\STM32_USB-FS-Device_Driver\src\usb_int.c" lastModified="12ecd641660"/>
       </target>
       <target file="ff_addons.o" lastModified="18a4889ffca">
          <source file="..\..\..\FatFs\ff_addons.c" lastModified="15d0068a3e0"/>
       </target>
+      <target file="usb_int.o" lastModified="18a4889cd7e">
+         <source file="..\..\..\STM32_USB-FS-Device_Driver\src\usb_int.c" lastModified="12ecd641660"/>
+      </target>
+      <target file="mbox.o" lastModified="18a4889fbea">
+         <source file="..\..\..\CoOS\kernel\mbox.c" lastModified="15a24749ad0"/>
+      </target>
+      <target file="exceptions.o" lastModified="198988dea06">
+         <source file="..\..\..\exceptions.c" lastModified="15a249c9d00"/>
+      </target>
       <target file="usb_pwr.o" lastModified="18a4889ea3e">
          <source file="..\..\..\usb\usb_pwr.c" lastModified="135380d05c0"/>
-      </target>
-      <target file="mm.o" lastModified="18a4889fcea">
-         <source file="..\..\..\CoOS\kernel\mm.c" lastModified="15a24749ad0"/>
       </target>
       <target file="usb_mem.o" lastModified="18a488a2902">
          <source file="..\..\..\STM32_USB-FS-Device_Driver\src\usb_mem.c" lastModified="12ecd641660"/>
       </target>
-      <target file="startup_stm32f10x_md.o" lastModified="18a4889de18">
-         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="15a2475a470"/>
+      <target file="mm.o" lastModified="18a4889fcea">
+         <source file="..\..\..\CoOS\kernel\mm.c" lastModified="15a24749ad0"/>
       </target>
       <target file="task.o" lastModified="18a4889df47">
          <source file="..\..\..\CoOS\kernel\task.c" lastModified="15a24749ad0"/>
+      </target>
+      <target file="startup_stm32f10x_md.o" lastModified="18a4889de18">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="15a2475a470"/>
       </target>
       <target file="stm32f10x_i2c.o" lastModified="18a488a26cb">
          <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="18a1375231f"/>
@@ -187,11 +187,11 @@
       <target file="usb-main.o" lastModified="18a4889ef0c">
          <source file="..\..\..\usb\usb-main.c" lastModified="16d821e965c"/>
       </target>
-      <target file="I2C_c.o" lastModified="198988df907">
-         <source file="..\..\..\dbgu\I2C_c.c" lastModified="18a5324058a"/>
-      </target>
       <target file="stm32f10x_spi.o" lastModified="18a488a244d">
          <source file="..\..\..\stm_lib\src\stm32f10x_spi.c" lastModified="16d17d6d635"/>
+      </target>
+      <target file="I2C_c.o" lastModified="198988df907">
+         <source file="..\..\..\dbgu\I2C_c.c" lastModified="18a5324058a"/>
       </target>
       <target file="time.o" lastModified="18a488a0a54">
          <source file="..\..\..\CoOS\kernel\time.c" lastModified="15a24749ad0"/>
