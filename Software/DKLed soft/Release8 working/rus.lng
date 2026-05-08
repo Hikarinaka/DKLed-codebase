@@ -1,0 +1,67 @@
+btnActions	События
+btnAdd	Добавить
+btnAddImage	Добавить изображения
+btnCancel	Отмена
+btnClearImage	Очитка
+btnCompile	Компилировать
+btnCompileAndView	Компилировать и эмулировать
+btnCopyText	В буфер обмена
+btnCreateMiddle	Создать среднее изображение
+btnDuplicate	Дублировать
+btnLoop	Зациклить
+btnMoveLeft	Сдвиг влево
+btnMoveRigth	Сдвиг вправо
+btnNew	Новый
+btnOk	Ok
+btnOpen	Открыть
+btnRemove	Удалить выбранные
+btnRemove	Удалить
+btnRemoveImages	Удалить изображения
+btnSave	Сохранить
+btnSaveAs	Сохранить как...
+btnSaveHCD	Сохранить скомпилированный файл
+btnSettings	Настройки
+btnSplit	Разделить изображение
+chKeyDown	Действие по нажатию
+chUseGamma	Использовать гамма коррекцию
+Form1	Генератор для САПР
+frmAddImages	Добавление изображений
+frmSettings	Настройки
+frmTActions	События
+groupActionByEnd	Действие по завершению
+groupBaseChanel	Общий канал
+groupButtonEvents	Действия по кнопкам
+groupComponentsType	Тип компонентов
+groupImageSize	Размер изображений
+groupPause	Паузы
+groupSplitImages	Разделить изображение
+labBright	Яркость
+labBtnNumber	Номер кнопки
+labByX	по X
+labByY	по Y
+labContrast	Контраст
+labFileName	Имя файла
+labHeight	Высота
+labHeight_	Высота:
+labImageMoving	Сдвиг выбранных изображений:
+lablWantRestart	Изменения вступят в силу
+после перезапуска приложения
+labMills	Миллисекунд
+labPause_	Пауза:
+labPort	Порт
+labWidth	Ширина
+labWidth_	Ширина:
+mnuPrevSizes	Размер миниатюр
+rbCompList	Список изображений
+rbCompTimeLine	Временная линия
+rFileAction	Открыть файл
+rLoopAction	Зациклить
+rNoAction	Остановить
+SplitForm	SplitForm
+tabBaseSettings	Общие
+tabGammaCorrection	Гамма коррекция
+toolDirection	Прямое направление
+toolDirectionLR	Прямое направление
+toolDirectionLRRL	Прямое и обратное
+toolDirectionRL	Обратное направление
+toolDirectionRLLR	Обратное и прямое

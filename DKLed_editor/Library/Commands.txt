@@ -1,0 +1,531 @@
+HCD Version = "0.3", "0.5", "0.7"
+Group:
+Command group = "Event"
+Group name = "Events"
+Group description = "How to manage different interrupts. Typically it's  what to do when a button or combination of buttons is pressed, a button is released or something triggered the 'virtual button' through a port"
+
+Command:
+Command name = "Disable button repeat while pressed"
+Command Description = "Controller will notice only when button get actually pressed despite how long it's held pressed"
+Command Stackable = No
+Command Start text= "G26P0"
+
+Command:
+Command name = "Generate End of scenario interrupt"
+Command Description = "Generates fake Scenario finished interrupt so controller can process a delayed jump to another scenario file. In other words, there is a button/event setting that directs controller to specific file whenever it reads a Repeat scenario (M47), Open Next scenario file (M98 or M88) or End of scenario (M2) command. If no such event happened, controller continues reading current scenario file"
+Command Requires = File read-write mode, off
+Command Requires = = Scenario reading mode, on
+Command Stackable = No
+Command Start text= "M2"
+
+Command:
+Command name = "Randomize random seed"
+Command Description = "Sets random seed to a random value according to current internal time, so commands that rely on randomness will produce unpredictable results"
+Command Stackable = Yes
+Command Start text= "M90"
+
+
+
+
+
+Group:
+Command group = "Scenario splits"
+Group name = "Navigation between scenario files"
+Group Requires = File read-write mode, off
+Group Requires = = Scenario reading mode, on
+Group description = "Events like repeat the scenario file from the start or opening another scenario file. Usually it's commands that tell controller what to do when scenario file is ended or when it's need to read a 'subprogram'"
+
+Command:
+Command name = "Generate End of scenario interrupt"
+Command Description = "Generates fake Scenario finished interrupt so controller can process a delayed jump to another scenario file. In other words, there is a button/event setting that directs controller to specific file whenever it reads a Repeat scenario (M47), Open Next scenario file (M98 or M88) or End of scenario (M2) command. If no such event happened, controller continues reading current scenario file"
+Command Stackable = No
+Command Start text= "M2"
+
+Command:
+Command name = "Repeat scenario several times"
+Command Description = "Repeats scenario file from the start specific amount of times. After it's done all the repetitions controller keep reading the rest of the file"
+Command Stackable = Yes
+Command Start text= "M47P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = no
+Parameter 1 name = "Repetitions:"
+Parameter 1 number of entries = 1
+Parameter 1 range = 1,65535
+Parameter 1 length = any
+
+Command:
+Command name = "Repeat scenario infinite times"
+Command Description = "Repeats scenario file from the start, until shutdown or open another file command is called by button event or through port"
+Command Stackable = Yes
+Command Start text= "M47"
+
+Command:
+Command name = "Return from subprogram"
+Command Description = "Returns to the exact line in main scenario, where the Enter Subprogram command was called."
+Command Stackable = Yes
+Command Start text= "M89"
+
+
+
+
+
+Group:
+Command group = "Setup"
+Group name = "Controller I/O setup"
+Group description = "Commands that tells the controller what devices it is controlling and how to manage them"
+
+Command:
+Command name = "Outputs: only WS2812 LEDs"
+Command Description = "Tells the controller, that it will operate only spi (smart) LEDs, compartible with WS2812 driver"
+Command sets = LED mode
+Command sets = Fast Animation Mode
+Command sets = WS2812
+Command clears = Servo
+Command clears = SK6812
+Command Stackable = No
+Command Start text= "M6PWS2812"
+
+Command:
+Command name = "Outputs: only SK6812 LEDs"
+Command Description = "Tells the controller, that it will operate only spi (smart) LEDs, compartible with SK6812 driver"
+Command sets = LED mode
+Command sets = Fast Animation Mode
+Command sets = SK6812
+Command clears = Servo
+Command clears = WS2812
+Command Stackable = No
+Command Start text= "M6PSK6812"
+
+Command:
+Command name = "Outputs: only WS2812 and SK6812 LEDs"
+Command Description = "Tells the controller, that it will operate only spi (smart) LEDs, compartible with both WS2812 and SK6812 drivers"
+Command sets = LED mode
+Command sets = Fast Animation Mode
+Command sets = WS2812
+Command clears = Servo
+Command sets = SK6812
+Command Stackable = No
+Command Start text= "M6PWK0012"
+
+Command:
+Command name = "Outputs: only Servos and PWM"
+Command Description = "Tells the controller, that it will operate only servo drives and Pulse Frequency modulated devices. Default servos for this mode is Tower Pro's servos like SG90 and similar drivers, but PWM parameters can be adjusted to other frequencies and pulse widths"
+Command clears = LED mode
+Command clears = Fast Animation Mode
+Command clears = WS2812
+Command sets = Servo
+Command clears = SK6812
+Command Stackable = No
+Command Start text= "M6PSDSG90"
+
+Command:
+Command name = "Outputs: WS2812 LEDs and Servos (Hybrid mode)"
+Command Description = "Hybrid mode. Tells the controller, that it will operate both spi (smart) LEDs, compartible with WS2812 specification and servo drives. Default servos for this mode is Tower Pro's servos like SG90 and similar drivers, but PWM parameters can be adjusted to other frequencies and pulse widths"
+Command sets = LED mode
+Command clears = Fast Animation Mode
+Command sets = WS2812
+Command sets = Servo
+Command clears = SK6812
+Command Stackable = No
+Command Start text= "M6PWS00SD"
+
+Command:
+Command name = "Outputs: SK6812 LEDs and Servos (Hybrid mode)"
+Command Description = "Hybrid mode. Tells the controller, that it will operate both spi (smart) LEDs, compartible with SK6812 specification and servo drives. Default servos for this mode is Tower Pro's servos like SG90 and similar drivers, but PWM parameters can be adjusted to other frequencies and pulse widths"
+Command sets = LED mode
+Command clears = Fast Animation Mode
+Command clears = WS2812
+Command sets = Servo
+Command sets = SK6812
+Command Stackable = No
+Command Start text= "M6PSK00SD"
+
+Command:
+Command name = "In Hybrid mode: all outputs to servo"
+Command Description = "Sets every output of controller to control servo drives and PWM devices"
+Command Requires = Servo mode, on
+Command Requires = Fast Video mode, off
+Command Stackable = Yes
+Command Start text= "M3"
+
+Command:
+Command name = "In Hybrid mode: all outputs to spi LEDs"
+Command Description = "Works only in hybrid (LED + Servo) mode and sets all the outputs to control SPI LEDs, WS2812 and other of that kind"
+Command Requires = Servo mode, on
+Command Requires = Fast Video mode, off
+Command Stackable = No
+Command Start text= "M4"
+
+Command:
+Command name = "Disable button repeat while pressed"
+Command Description = "Controller will notice only when button get actually pressed despite how long it's held pressed"
+Command Stackable = No
+Command Start text= "G26P0"
+
+Command:
+Command name = "Set buttons to react individually"
+Command Description = "Each button will react to push end release regardless of the state of other buttons. So you can set a reaction to two events - Push and Release - for each of button inputs"
+Command Requires = Combination mode, on
+Command sets = Single push mode
+Command clears = Combination mode
+Command Stackable = No
+Command Start text= "M86P0"
+
+Command:
+Command name = "Set buttons to react in combination"
+Command Description = "Each combination of pushed buttons generate it's own event. As it's virtually impossible to push all the buttons at the same time, a Time Window can be set with G27 command, i.e. how much time in milliseconds should pass from push of first button in combination till it will be (hopefully) formed, and can be processed"
+Command Requires = Single push mode, on
+Command sets = Combination mode
+Command clears = Single push mode
+Command Stackable = No
+Command Start text= "M86P1"
+
+Command:
+Command name = "Disable all encoders"
+Command Description = "Button inputs no longer mapped to encoder"
+Command Requires = Single push mode, on
+Command Stackable = No
+Command Start text= "M86Q"
+
+Command:
+Command name = "Set servo settings to Default"
+Command Description = "Sets servo and PWM settings to default: Impulse length is from 0.5 to 2.5 ms, discretisation is 512 steps, Impulse frequency 50Hz (total signal length 20 ms)"
+Command Requires = Servo mode, on
+Command Requires = Fast Video mode, off
+Command Stackable = No
+Command Start text= "G49"
+Parameter 1 sets = default servo steps count
+
+Command:
+Command name = "Randomize random seed"
+Command Description = "Sets random seed to a random value according to current internal time, so commands that rely on randomness will produce unpredictable results"
+Command Stackable = Yes
+Command Start text= "M90"
+
+
+
+
+
+Group:
+Command group = "LED"
+Group name = "SmartLed control"
+Group Requires = LEDs, on
+Group description = "Controls output to SPI LEDs, WS2812 and other. Sets individual pixel colors, moves colors between pixels and other operations"
+
+Command:
+Command name = "Reset LED color difference count"
+Command Description = "Sets the number of found mismatches in pixel colors (see ?RRGGBB operand description) to specific values to zero"
+Command Stackable = No
+Command Start text= "M45"
+
+Command:
+Command name = "In Hybrid mode: all outputs to spi LEDs"
+Command Description = "Works only in hybrid (LED + Servo) mode and sets all the outputs to control SPI LEDs, WS2812 and other of that kind"
+Command Requires = Servo mode, on
+Command Requires = LED mode, on
+Command Requires = Fast Video mode, off
+Command Stackable = No
+Command Start text= "M4"
+
+Command:
+Command name = "Brightness for spi LEDs"
+Command Description = "Sets brightness prescaler: when a new set of colors is passed to LED color buffer (in other words, S<outout>P<colors> is called), all the color values will get smaller. Brightness of 32 is a maximum brightness and full color, written in scenario, and brightness of 0 is 32 times smaller. You can use + and - signs to indicate how to change brightness instead of setting a distinct value"
+Command Stackable = Yes
+Command Start text= "G28P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = yes
+Parameter 1 name = "Brightness:"
+Parameter 1 number of entries = 1
+Parameter 1 range = 0,32
+Parameter 1 length = any
+Parameter 1 Depends on = Maximum Brightness
+Parameter 1 sets = brightness
+
+
+Group:
+Command group = "Timing"
+Group name = "Delays"
+Group description = "Controlling the pace of scenarios, i.e. when certain event should occur. Time is counted from the moment a scenario file is opened.'Subprogram' scenarios does not affect the timings)"
+
+Command:
+Command name = "Update outputs and continue"
+Command Description = "Updates LED and drive outputs and continue reading scenario file"
+Command Stackable = Yes
+Command Start text= "G4"
+
+Command:
+Command name = "Continue reading scenario"
+Command Description = "Continues reading the scenario file if it was paused"
+Command Requires = File read-write mode, off
+Command Requires = = Scenario reading mode, on
+Command Stackable = Yes
+Command Start text= "M24"
+
+Command:
+Command name = "Stops scenario"
+Command Description = "Pauses current scenario file execution till another file or Continue Reading is called externally"
+Command Requires = File read-write mode, off
+Command Requires = = Scenario reading mode, on
+Command Stackable = Yes
+Command Start text= "M25"
+
+Command:
+Command name = "Interrupt relative pause"
+Command Description = "If scenario is timed based on interval durations between frames and other actions, this command halts current duration so next command can be executed immediatelly"
+Command Requires = File read-write mode, off
+Command Requires = = Scenario reading mode, on
+Command Stackable = Yes
+Command Start text= "G9"
+
+
+
+
+
+
+HCD Version = "0.5", "0.7"
+Group:
+Command group = "Communication"
+Group name = "Communication with other devices"
+Group Requires = Byte receiver, on
+Group Requires = String receiver, on
+Group description = "Sending and receiving commands to/from other devices and setting dedicated parameters (like Baudrate for UARTs)" 
+
+Command:
+Command name = "Stop casting error reports"
+Command Description = "Stops generating and broadcasting error reports through USB port"
+Command Stackable = No
+Command Start text= "UD0"
+
+Command:
+Command name = "Cast error reports"
+Command Description = "Broadcasting error reports through USB port so it's possible to get what's wrong with scenario files. Sometimes it can be annoying, like once when scenario got saved in Unicode instead of ASCII, controller reported every other symbol from the file as an unexpected one with detailed information of it's position. But otherwise it's helpful to find a syntax error or missing file"
+Command Stackable = No
+Command Start text= "UD1"
+
+
+
+
+Group:
+Command group = "File"
+Group name = "Files at controller"
+Group description = "Managing scenario files in controller's flash drive memory"
+
+Command:
+Command name = "Set main workfolder"
+Command Description = "Sets main folder (0:/hcd) as the one to read scenarios from."
+Command Requires = File read-write mode, off
+Command Requires = Scenario reading mode, on
+Command Stackable = No
+Command Start text= "M23"
+
+Command:
+Command name = "Enter file browsing mode"
+Command Description = "Set controller in a mode that allows to browse, add, delete or modify scenario files in it's flash drive. Reading and executing scenarios in this mode is not possible, but controller still can perform operations from ports"
+Command Requires = File read-write mode, off
+Command Requires = Scenario reading mode, on
+Command sets = File read-write mode
+Command clears = Scenario reading mode
+Command Stackable = No
+Command Start text= "F0P1"
+
+Command:
+Command name = "Exit file browsing mode"
+Command Description = "Return controller to main operating mode. Current scenario file will be reopenned in case it was modified in this mode"
+Command Requires = File read-write mode, on
+Command sets = Scenario reading mode
+Command clears = File read-write mode
+Command Stackable = No
+Command Start text= "F0P0"
+
+Command:
+Command name = "Set main workfolder to browse"
+Command Description = "Sets main folder (0:/hcd) as the one to browse, open or delete and create new files. This command works only in File Browsing mode"
+Command Requires = File read-write mode, on
+Command Stackable = No
+Command Start text= "F2"
+
+Command:
+Command name = "Create file"
+Command Description = "Creates a new file to write in current workfolder (main or set with last F2 command). This command works only in File Browsing mode"
+Command Requires = File read-write mode, on
+Command Stackable = No
+Command Start text= "F9"
+
+Command:
+Command name = "Enable CRC check"
+Command Description = "Enables Cyclic Redundancy Check for write operations. Each string sent to write into the file (created with F9 command) will require 4 bytes of CRC in the end. This command works only in File Browsing mode"
+Command Requires = File read-write mode, on
+Command Stackable = No
+Command Start text= "F12P1"
+
+Command:
+Command name = "Disables CRC check"
+Command Description = "Disables Cyclic Redundancy Check for write operations. It's still required to add 4 bytes at the end of string to write in a file, but that bytes no longer need to be calculated with CRC algorithm. This command works only in File Browsing mode"
+Command Requires = File read-write mode, on
+Command Stackable = No
+Command Start text= "F12P1"
+
+
+
+
+
+
+
+
+Group:
+Command group = "Fast Animation"
+Group name = "Faster animation"
+Group Requires = LED mode, on
+Group Requires = Fast Animation, on
+Group Requires = Servo mode, off
+Group description = "Commands that allows controller to play animations on the SPI (Smart) LEDs as fast as possible with update frequencies up to 2000 Hz. This is useful for stage special effetc like pixel pois and fast spinning props"
+
+Command:
+Command name = "Stop playing Fast Video sequence"
+Command Description = "Interrupts playing video sequence from memory (Fast Video sequence). If there was finite amount of frames to play, this also triggers controller to continue reading and executing current scenario file"
+Command Stackable = Yes
+Command Start text= "G36P0"
+
+Command:
+Command name = "Start playing Fast Video sequence"
+Command Description = "Begins playing video sequence from memory (Fast Video sequence) according to previously set frequency, amount of frames to play and other Fast Video parameters as soon as the next Output command (G4 or G6 commands) will be called. If this command called from a button, starts playing immediately"
+Command Stackable = Yes
+Command Start text= "G36P1"
+
+Command:
+Command name = "Set Fast animation to play until interrupted"
+Command Description = "Sets video sequence from memory (Fast Video sequence) in a state that it will be played until stopped from a button or another command. When amount of frames to play setting is in this mode, controller will continue reading and executing scenario file during playing video sequence to be able to perform other duties including stop playing the sequence in time"
+Command Stackable = Yes
+Command Start text= "G35P0"
+
+Command:
+Command name = "Set amount of frames to play"
+Command Description = "Sets video sequence from memory (Fast Video sequence) in a state that it will play the exact number of frames. Controller won't read scenario file until all the frames will be played."
+Command Stackable = Yes
+Command Start text= "G35P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = no
+Parameter 1 name = "Number of frames to pay:"
+Parameter 1 number of entries = 1
+Parameter 1 range = 1,65534
+Parameter 1 length = any
+
+Command:
+Command name = "Set first frame to be played"
+Command Description = "Sets start frame for Fast Animation. This parameter can not be larger than total number of frames in current Fast Animation."
+Command Stackable = No
+Command Start text= "G29P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = no
+Parameter 1 name = "Number of unique frames:"
+Parameter 1 number of entries = 1
+Parameter 1 range = 0,511
+Parameter 1 length = any
+Parameter 1 depends on = number of unique frames
+
+Command:
+Command name = "Set Fast animation speed (FPS)"
+Command Description = "Sets speed of Fast animation - how many frames to play in one second. Slowest speed in this mode is 50 frames per second and fastest is 1600. But controller can reach this speed only for frames that consists of relatively small number of pixels (8 per output or 64 per all 8 outputs). For larger frames maximum speed is lowered accordingly - for example, 16 pixels per output can handle only 800 FPS. You can use signs + and - to set how much to change current frequency."
+Command Stackable = yes
+Command Start text= "G30P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = yes
+Parameter 1 name = "FPS (frames per second):"
+Parameter 1 number of entries = 1
+Parameter 1 range = 50,1600
+Parameter 1 length = any
+
+Command:
+Command name = "Set frame size in pixels per output"
+Command Description = "Sets how many pixels per single output are in each frame. Since FA is a mode developed for 'fire show' with LEDs, usually each frame is basically a single column of an image. And that column can consist of several sections each connected to it's own output. This parameter specifies how many pixels are in each of that sections.Note, that as the whole animation is stored in controller's memory, and this number can not be larger than number of pixels per output (512)"
+Command Stackable = no
+Command Start text= "G31P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = no
+Parameter 1 name = "Number of unique frames:"
+Parameter 1 number of entries = 1
+Parameter 1 range = 1,512
+Parameter 1 length = any
+Parameter 1 sets = frame size
+Parameter 1 depends on = number of unique frames
+
+Command:
+Command name = "Set number of unique frames"
+Command Description = "Sets how many different frames will be in Fast animation. Since FA is a mode developed for 'fire show' with LEDs, usually each frame is basically a single column of an image so this parameter can be treated as number of columns in the image to display. Note, that as the whole animation is stored in controller's memory, the total number of frames can not be larger than number of pixels per output (512)"
+Command Stackable = no
+Command Start text= "G32P"
+Parameter 1 Type = Number
+Parameter 1 + or - sign allowed = no
+Parameter 1 name = "Number of unique frames:"
+Parameter 1 number of entries = 1
+Parameter 1 range = 1,512
+Parameter 1 length = any
+Parameter 1 sets = number of unique frames
+Parameter 1 depends on = frame size
+
+
+
+
+
+
+Group:
+Command group = "Servo drive"
+Group name = "Drives and switches"
+Group Requires = Fast Animation, off
+Group Requires = Servo mode, on
+Group description = "Commands that allow to control servo drives or simple electric devices that are pulse width modulated or simply switches on and off. Like drives, ordinary LED stripes and lights, smoking machines and so on"
+
+Command:
+Command name = "Disable real time servo control"
+Command Description = "Makes Servos, PWM and on/off outputs to change their state only when update output command (G4 or G6) is called. In other words servos, PWM and on/off outputs will act based in frame timings"
+Command Stackable = Yes
+Command Start text= "G1P0"
+
+Command:
+Command name = "Enable real time servo control"
+Command Description = "Makes Servos, PWM and on/off outputs to change their position or state as soon as their parameters (like servo position) are changed instead of waiting when the next frame will start"
+Command Stackable = Yes
+Command Start text= "G1P1"
+
+Command:
+Command name = "In Hybrid mode: all outputs to servo"
+Command Description = "Sets every output of controller to control servo drives and PWM devices"
+Command Stackable = Yes
+Command Start text= "M3"
+
+Command:
+Command name = "In Hybrid mode: all outputs to spi LEDs"
+Command Description = "Works only in hybrid (LED + Servo) mode and sets all the outputs to control SPI LEDs, WS2812 and other of that kind"
+Command Stackable = No
+Command Start text= "M4"
+
+Command:
+Command name = "Disable all servos"
+Command Description = "Disables all connected servos and PWM at once. Servos stop maintaining their position"
+Command Stackable = Yes
+Command Start text= "M5"
+
+Command:
+Command name = "Switch ON all non-LED outputs"
+Command Description = "Sets all the outputs to On (+3V, or High). This command sets ON every single output, including the ones that are mapped to be LEDs or servos. "
+Command Stackable = Yes
+Command Start text= "M10"
+
+Command:
+Command name = "Switch OFF all non-LED outputs"
+Command Description = "Sets all the outputs to Off (0V, or Low)"
+Command Stackable = Yes
+Command Start text= "M11"
+
+Command:
+Command name = "Set servo settings to Default"
+Command Description = "Sets servo and PWM settings to default: Impulse length is from 0.5 to 2.5 ms, discretisation is 512 steps, Impulse frequency 50Hz (total signal length 20 ms)"
+Command Stackable = No
+Command Start text= "G49"
+Parameter 1 sets = default servo steps count
+
+Command:
+Command name = "Randomize random seed"
+Command Description = "Sets random seed to a random value according to current internal time, so commands that rely on randomness will produce unpredictable results"
+Command Stackable = Yes
+Command Start text= "M90"

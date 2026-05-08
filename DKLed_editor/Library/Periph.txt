@@ -1,0 +1,35 @@
+PERIPHERY:
+name = "Servo"
+inputs = 1
+outputs = 0
+port lines = 0
+events = 0
+encoders = 0
+product name= "SG 90"
+kind = servo drive
+servo steps = 512
+servo start position = 500
+servo end position = 2500
+servo frequency = 50
+
+PERIPHERY:
+name = "Servo"
+inputs = 1
+outputs = 0
+port lines = 0
+events = 0
+encoders = 0
+product name= "SRV 02"
+kind = servo drive
+servo steps = 1024
+servo start position = 500
+servo end position = 2500
+servo frequency = 50
+
+PERIPHERY:
+name = "Keyboard"
+inputs = 0
+outputs = 5
+port lines = 0
+events = 0
+encoders = 0

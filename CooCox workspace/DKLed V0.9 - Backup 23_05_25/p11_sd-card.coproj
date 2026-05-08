@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.8" name="p11_sd-card">
+  <Target name="p11_sd-card" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="305" chipName="STM32F103C8" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+          <Define name="STM32F103C8"/>
+          <Define name="STM32F10X_MD"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value=""/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00010000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00005000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../configuration/programdata/p11_sd-card/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="p11_sd-card"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_MD_64.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="50" name="CMSIS core" path="" type="2"/>
+    <Component id="51" name="CooCox OS" path="" type="2"/>
+    <Component id="439" name="CMSIS_Boot" path="" type="2"/>
+    <Component id="440" name="RCC" path="" type="2"/>
+    <Component id="441" name="CRC" path="" type="2"/>
+    <Component id="444" name="GPIO" path="" type="2"/>
+    <Component id="445" name="EXTI" path="" type="2"/>
+    <Component id="446" name="DMA" path="" type="2"/>
+    <Component id="452" name="SPI" path="" type="2"/>
+    <Component id="453" name="I2C" path="" type="2"/>
+    <Component id="455" name="FLASH" path="" type="2"/>
+    <Component id="456" name="TIM" path="" type="2"/>
+    <Component id="458" name="USART" path="" type="2"/>
+    <Component id="467" name="MISC" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="dbgu/USB_c.c" path="dbgu/USB_c.c" type="1"/>
+    <File name="USB/usb-main.c" path="usb/usb-main.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_lib.h" path="STM32_USB-FS-Device_Driver/inc/usb_lib.h" type="1"/>
+    <File name="USB/usb_prop.c" path="usb/usb_prop.c" type="1"/>
+    <File name="dbgu/I2C_c.c" path="dbgu/I2C_c.c" type="1"/>
+    <File name="WS2812_vet/init_ws.c" path="WS2812_vet/init_ws.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_int.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_int.c" type="1"/>
+    <File name="CoOS/kernel/OsServiceReq.h" path="CoOS/kernel/OsServiceReq.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_int.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_int.h" type="1"/>
+    <File name="CoOS/Document/readme.txt" path="CoOS/Document/readme.txt" type="1"/>
+    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
+    <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
+    <File name="CoOS/portable/GCC" path="" type="2"/>
+    <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_pcd.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_pcd.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_flash.h" path="stm_lib/inc/stm32f10x_flash.h" type="1"/>
+    <File name="timings.c" path="timings.c" type="1"/>
+    <File name="CoOS/kernel/task.c" path="CoOS/kernel/task.c" type="1"/>
+    <File name="dbgu/dbgu.c" path="dbgu/dbgu.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
+    <File name="CoOS/portable/GCC/port.c" path="CoOS/portable/GCC/port.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_core.c" path="STM32_USB-FS-Device_Driver/src/usb_core.c" type="1"/>
+    <File name="buttons.c" path="buttons.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_mem.h" path="STM32_USB-FS-Device_Driver/inc/usb_mem.h" type="1"/>
+    <File name="CoOS/kernel/OsKernelHeap.h" path="CoOS/kernel/OsKernelHeap.h" type="1"/>
+    <File name="dbgu/USB_c.h" path="dbgu/USB_c.h" type="1"/>
+    <File name="USB/newlib_stubs.c" path="usb/newlib_stubs.c" type="1"/>
+    <File name="USB/usb_prop.h" path="usb/usb_prop.h" type="1"/>
+    <File name="CoOS/kernel/OsTime.h" path="CoOS/kernel/OsTime.h" type="1"/>
+    <File name="USB/stm32f10x_conf.h" path="usb/stm32f10x_conf.h" type="1"/>
+    <File name="dbgu/I2C_c.h" path="dbgu/I2C_c.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_dev.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_dev.c" type="1"/>
+    <File name="USB/usb_istr.h" path="usb/usb_istr.h" type="1"/>
+    <File name="CoOS/kernel" path="" type="2"/>
+    <File name="CoOS/kernel/time.c" path="CoOS/kernel/time.c" type="1"/>
+    <File name="USB" path="" type="2"/>
+    <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
+    <File name="USB/usb_desc.h" path="usb/usb_desc.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
+    <File name="CoOS/portable/OsArch.h" path="CoOS/portable/OsArch.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_regs.h" path="STM32_USB-FS-Device_Driver/inc/usb_regs.h" type="1"/>
+    <File name="CoOS/kernel/OsCore.h" path="CoOS/kernel/OsCore.h" type="1"/>
+    <File name="USB/hw_config.h" path="usb/hw_config.h" type="1"/>
+    <File name="board.h" path="board.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="CoOS/kernel/sem.c" path="CoOS/kernel/sem.c" type="1"/>
+    <File name="CoOS/kernel/OsQueue.h" path="CoOS/kernel/OsQueue.h" type="1"/>
+    <File name="CoOS/kernel/CoOS.h" path="CoOS/kernel/CoOS.h" type="1"/>
+    <File name="OsTasks/inputsTask.c" path="OsTasks/inputsTask.c" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
+    <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_sil.c" path="STM32_USB-FS-Device_Driver/src/usb_sil.c" type="1"/>
+    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_def.h" path="STM32_USB-FS-Device_Driver/inc/usb_def.h" type="1"/>
+    <File name="CoOS/kernel/mutex.c" path="CoOS/kernel/mutex.c" type="1"/>
+    <File name="dbgu/dbgu.h" path="dbgu/dbgu.h" type="1"/>
+    <File name="dbgu" path="" type="2"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_type.h" path="STM32_USB-FS-Device_Driver/inc/usb_type.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_init.c" path="STM32_USB-FS-Device_Driver/src/usb_init.c" type="1"/>
+    <File name="USB/usb_istr.c" path="usb/usb_istr.c" type="1"/>
+    <File name="FatFS" path="" type="2"/>
+    <File name="exceptions.h" path="exceptions.h" type="1"/>
+    <File name="USB/usb_conf.h" path="usb/usb_conf.h" type="1"/>
+    <File name="CoOS/kernel/flag.c" path="CoOS/kernel/flag.c" type="1"/>
+    <File name="USB/hw_config.c" path="usb/hw_config.c" type="1"/>
+    <File name="CoOS/kernel/utility.h" path="CoOS/kernel/utility.h" type="1"/>
+    <File name="CoOS/kernel/mm.c" path="CoOS/kernel/mm.c" type="1"/>
+    <File name="USB/usb_endp.c" path="usb/usb_endp.c" type="1"/>
+    <File name="descriptor_S-code/descript_S.h" path="descriptor_S-code/descript_S.h" type="1"/>
+    <File name="CoOS/kernel/OsError.h" path="CoOS/kernel/OsError.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_cal.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_cal.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
+    <File name="stm_lib/src" path="" type="2"/>
+    <File name="descriptor_S-code/descript_S.c" path="descriptor_S-code/descript_S.c" type="1"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="stm_lib" path="" type="2"/>
+    <File name="WS2812_vet/init_ws.h" path="WS2812_vet/init_ws.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_exti.h" path="stm_lib/inc/stm32f10x_exti.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_dev.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_dev.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
+    <File name="CoOS/kernel/kernelHeap.c" path="CoOS/kernel/kernelHeap.c" type="1"/>
+    <File name="FatFS/ffconf.h" path="FatFs/ffconf.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_pcd.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_pcd.h" type="1"/>
+    <File name="CoOS/kernel/serviceReq.c" path="CoOS/kernel/serviceReq.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_crc.c" path="stm_lib/src/stm32f10x_crc.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_i2c.c" path="stm_lib/src/stm32f10x_i2c.c" type="1"/>
+    <File name="OsTasks" path="" type="2"/>
+    <File name="CoOS/kernel/coocox.h" path="CoOS/kernel/coocox.h" type="1"/>
+    <File name="FatFS/ff_addons.h" path="FatFs/ff_addons.h" type="1"/>
+    <File name="timings.h" path="timings.h" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="FatFS/sd_spi_stm32.c" path="FatFs/sd_spi_stm32.c" type="1"/>
+    <File name="WS2812_vet/file_functions.h" path="file_functions.h" type="1"/>
+    <File name="CoOS/kernel/utility.c" path="CoOS/kernel/utility.c" type="1"/>
+    <File name="FatFS/diskio.h" path="FatFs/diskio.h" type="1"/>
+    <File name="CoOS/kernel/OsConfig.h" path="CoOS/kernel/OsConfig.h" type="1"/>
+    <File name="FatFS/integer.h" path="FatFs/integer.h" type="1"/>
+    <File name="OsTasks/debugTask.c" path="OsTasks/debugTask.c" type="1"/>
+    <File name="CoOS/kernel/queue.c" path="CoOS/kernel/queue.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_cal.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_cal.c" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_regs.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_regs.h" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="descriptor_S-code" path="" type="2"/>
+    <File name="CoOS/kernel/OsTask.h" path="CoOS/kernel/OsTask.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
+    <File name="FatFS/ff_addons.c" path="FatFs/ff_addons.c" type="1"/>
+    <File name="OsTasks/outputTask.h" path="OsTasks/outputTask.h" type="1"/>
+    <File name="CoOS/kernel/timer.c" path="CoOS/kernel/timer.c" type="1"/>
+    <File name="CoOS/Document" path="" type="2"/>
+    <File name="OsTasks/debugTask.h" path="OsTasks/debugTask.h" type="1"/>
+    <File name="CoOS/kernel/OsFlag.h" path="CoOS/kernel/OsFlag.h" type="1"/>
+    <File name="dbgu/stdio.c" path="dbgu/stdio.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_core.h" path="STM32_USB-FS-Device_Driver/inc/usb_core.h" type="1"/>
+    <File name="exceptions.c" path="exceptions.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="CoOS/kernel/OsMutex.h" path="CoOS/kernel/OsMutex.h" type="1"/>
+    <File name="CoOS/kernel/OsTimer.h" path="CoOS/kernel/OsTimer.h" type="1"/>
+    <File name="CoOS/kernel/OsEvent.h" path="CoOS/kernel/OsEvent.h" type="1"/>
+    <File name="WS2812_vet" path="" type="2"/>
+    <File name="CoOS/portable/arch.c" path="CoOS/portable/arch.c" type="1"/>
+    <File name="USB/usb_pwr.c" path="usb/usb_pwr.c" type="1"/>
+    <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_init.h" path="STM32_USB-FS-Device_Driver/inc/usb_init.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_exti.c" path="stm_lib/src/stm32f10x_exti.c" type="1"/>
+    <File name="CoOS/kernel/event.c" path="CoOS/kernel/event.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_int.h" path="STM32_USB-FS-Device_Driver/inc/usb_int.h" type="1"/>
+    <File name="OsTasks/outputTask.c" path="OsTasks/outputTask.c" type="1"/>
+    <File name="FatFS/ff.h" path="FatFs/ff.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_int.c" path="STM32_USB-FS-Device_Driver/src/usb_int.c" type="1"/>
+    <File name="includes.h" path="includes.h" type="1"/>
+    <File name="WS2812_vet/file_functions.c" path="file_functions.c" type="1"/>
+    <File name="CoOS/kernel/mbox.c" path="CoOS/kernel/mbox.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver" path="" type="2"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_mem.c" path="STM32_USB-FS-Device_Driver/src/usb_mem.c" type="1"/>
+    <File name="USB/usb_pwr.h" path="usb/usb_pwr.h" type="1"/>
+    <File name="CoOS/kernel/core.c" path="CoOS/kernel/core.c" type="1"/>
+    <File name="CoOS" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_flash.c" path="stm_lib/src/stm32f10x_flash.c" type="1"/>
+    <File name="USB/usb_desc.c" path="usb/usb_desc.c" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/usb_sil.h" path="STM32_USB-FS-Device_Driver/inc/usb_sil.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_regs.c" path="STM32_USB-FS-Device_Driver/src/usb_regs.c" type="1"/>
+    <File name="OsTasks/inputsTask.h" path="OsTasks/inputsTask.h" type="1"/>
+    <File name="CoOS/portable" path="" type="2"/>
+    <File name="CoOS/kernel/OsMM.h" path="CoOS/kernel/OsMM.h" type="1"/>
+    <File name="CoOS/kernel/hook.c" path="CoOS/kernel/hook.c" type="1"/>
+    <File name="FatFS/ff.c" path="FatFs/ff.c" type="1"/>
+    <File name="stm_lib/inc" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_crc.h" path="stm_lib/inc/stm32f10x_crc.h" type="1"/>
+    <File name="buttons.h" path="buttons.h" type="1"/>
+  </Files>
+</Project>

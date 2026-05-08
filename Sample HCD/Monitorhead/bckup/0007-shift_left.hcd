@@ -1,0 +1,7 @@
+S4p s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 s40f0 s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff s40ff s40fe s40fd s40fc s40fb s40fa s40f9 s40f8 s40f7 s40f6 s40f5 s40f4 s40f3 s40f2 s40f1 s40f0 
+M89
+;mooving image in channel 4
+;0005 - up
+;0006 - down
+;0007 - left (<)
+;0008 - right (>)

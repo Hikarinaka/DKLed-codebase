@@ -1,0 +1,7 @@
+G4N100
+U2T P\rWe are in SUB\r
+
+S0P S 0 002 FF0000 g
+G4P10
+;return back
+M89

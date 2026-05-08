@@ -1,0 +1,96 @@
+btnActions	События	События
+btnAdd	Добавить
+btnAddImage	Добавить изображения	Добавить изображения
+btnAddImagePort	Добавить линию для порта	Добавить линию для порта
+btnCancel	Отмена
+btnClearImage	Очитка	Очитка
+btnClose	Закрыть
+btnCompileAndView	Компилировать и эмулировать	Компилировать и эмулировать
+btnCreateMiddle	Создать среднее изображение	Создать среднее изображение
+btnDuplicate	Дублировать	Дублировать
+btnFormsArrangeIcons	Окна по умолчанию	Окна по умолчанию
+btnFormsCascade	Окна каскадом	Окна каскадом
+btnFormsHorizontal	Окна горизонтально	Окна горизонтально
+btnFormsVertical	Окна вертикально	Окна вертикально
+btnLoop	Зациклить	Зациклить
+btnMaxToAll	По максимальному для всех
+btnMoveLeft	Сдвиг влево	Сдвиг влево
+btnMoveRigth	Сдвиг вправо	Сдвиг вправо
+btnNew	Новый
+btnNew	Открыть или создать проект	Открыть или создать проект
+btnNormalizeTrackLangth	Нормализацияя длины треков	Нормализацияя длины треков
+btnOk	Ok
+btnOpen	Открыть
+btnPause	Пауза	Пауза
+btnPlay	Воспроизвести	Воспроизвести
+btnRawCompilation	Сохранить скомпилированный RAW файл	Сохранить скомпилированный RAW файл
+btnRemove	Удалить выбранные
+btnRemove	Удалить
+btnSave	Сохранить	Сохранить
+btnSaveAs	Сохранить как...
+btnSaveHCD	Сохранить скомпилированный файл	Сохранить скомпилированный файл
+btnSettings	Настройки	Настройки
+btnSplit	Разделить изображение	Разделить изображение
+btnStop	Стоп	Стоп
+btnSyncScrollbars	Синхронизация скроллов	Синхронизация скроллов
+chKeyDown	Действие по нажатию
+chShiftTime	Со смещением
+chUseGamma	Использовать гамма коррекцию
+Form2	Генератор для САПР: 
+frmAddImages	Добавление изображений
+frmEmulationMDI	frmEmulationMDI
+frmSettings	Настройки
+frmTActions	События
+frmTimeLengthComparer	Настройка длины портов
+groupActionByEnd	Действие по завершению
+groupBaseChanel	Общий канал
+groupBox1	Внешний вид
+groupBox1	Вставка
+groupButtonEvents	Действия по кнопкам
+groupComponentsType	Тип компонентов
+groupDefSettings	Параметры по умолчанию
+groupImageSize	Размер изображений
+groupLedType	Тип пикселей
+groupPause	Паузы
+groupSelectLang	Выбор языка
+groupSplitImages	Разделить изображение
+labAbsouyteTime	Время
+labBright	Яркость
+labBtnNumber	Номер кнопки
+labByX	по X
+labByY	по Y
+labCompilePixelsCount	Количество компилируемых пикселей
+labContrast	Контраст
+label1	Ширина:
+label2	Высота:
+label3	Пауза:
+labelLength	Длительность:	
+labFileName	Имя файла
+labHCDName	Имя скомпилированного
+labHeight	Высота
+labHeight_	Высота:	
+labImageMoving	Сдвиг выбранных изображений:	
+lablWantRestart	Изменения вступят в силу
+после перезапуска приложения
+labMills	Миллисекунд
+labPause_	Пауза:	
+labProjectName	Имя проекта
+labStatus	Установите крайнее время для портов	
+labWidth	Ширина
+labWidth_	Ширина:	
+mnuPrevSizes	Размер миниатюр	Размер миниатюр
+rbCompList	Список изображений
+rbCompTimeLine	Временная линия
+rBtnForms	Формы
+rBtnTabs	Вкладки
+rFileAction	Открыть файл
+rLoopAction	Зациклить
+rNoAction	Остановить
+tabGammaCorrection	Гамма коррекция
+tabHardware	Оборудование
+tabInterfaceSettings	Интерфейс
+toolDirection	Прямое направление
+toolDirectionLR	Прямое направление
+toolDirectionLRRL	Прямое и обратное
+toolDirectionRL	Обратное направление
+toolDirectionRLLR	Обратное и прямое

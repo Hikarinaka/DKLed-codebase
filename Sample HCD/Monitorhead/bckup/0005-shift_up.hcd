@@ -1,0 +1,7 @@
+S4p s400f >>>>>>>>>>>>>>> s4011 s4012 s4013 s4014 s4015 s4016 s4017 s4018 s4019 s401a s401b s401c s401d s401e s401f g s402f >>>>>>>>>>>>>>> s4031 s4032 s4033 s4034 s4035 s4036 s4037 s4038 s4039 s403a s403b s403c s403d s403e s403f g     s404f >>>>>>>>>>>>>>> s4051 s4052 s4053 s4054 s4055 s4056 s4057 s4058 s4059 s405a s405b s405c s405d s405e s405f g    s406f >>>>>>>>>>>>>>> s4071 s4072 s4073 s4074 s4075 s4076 s4077 s4078 s4079 s407a s407b s407c s407d s407e s407f g    s408f >>>>>>>>>>>>>>> s4091 s4092 s4093 s4094 s4095 s4096 s4097 s4098 s4099 s409a s409b s409c s409d s409e s409f g    s40af >>>>>>>>>>>>>>> s40b1 s40b2 s40b3 s40b4 s40b5 s40b6 s40b7 s40b8 s40b9 s40ba s40bb s40bc s40bd s40be s40bf g    s40cf >>>>>>>>>>>>>>> s40d1 s40d2 s40d3 s40d4 s40d5 s40d6 s40d7 s40d8 s40d9 s40da s40db s40dc s40dd s40de s40df g    s40ef >>>>>>>>>>>>>>> s40f1 s40f2 s40f3 s40f4 s40f5 s40f6 s40f7 s40f8 s40f9 s40fa s40fb s40fc s40fd s40fe s40ff g    
+M89
+;mooving image in channel 4
+;0005 - up
+;0006 - down
+;0007 - left (<)
+;0008 - right (>)

@@ -1,0 +1,6 @@
+M45
+S0P gggg gggg gggg ggg ?FF0000
+G25 Q0 P=0
+G0 Q67 P+22
+S0P S000F >>> >>>> >>>> >>>>
+G4

@@ -1,0 +1,120 @@
+HCD Version = "0.3", "0.5", "0.7"
+Group:
+Command group = "Event"
+Group name = "Events"
+Required toggle = none
+Group description = "How to manage different interrupts. Typically it's  what to do when a button or combination of buttons is pressed, a button is released or something triggered the 'virtual button' through a port"
+
+Group:
+Command group = "Scenario splits"
+Group name = "Navigation"
+Required toggle = none
+Group description = "Events like repeat the scenario file from the start or opening another scenario file. Usually it's commands that tell controller what to do when scenario file is ended or when it's need to read a 'subprogram'"
+
+Group:
+Command group = "Setup"
+Group name = "Controller I/O setup"
+Required toggle = none
+Group description = "Commands that tells the controller what devices it is controlling and how to manage them"
+
+Command:
+Command name = "Disable all encoders"
+Command Description = "Button inputs no longer mapped to encoder"
+Command Stackable = No
+Command Start text= "M86Q"
+
+Command:
+Command name = "Randomize random seed"
+Command Description = "Sets ramdom seed to a random value according to current internal time, so commands, that rely on randomness will produce unpredictable results"
+Command Stackable = Yes
+Command Start text= "M90"
+
+
+Group:
+Command group = "LED"
+Group name = "SmartLed control"
+Required toggle = none
+Group description = "Controls output to SPI LEDs, WS2812 and other. Sets individual pixel colors, moves colors between pixels and other operations"
+
+Command:
+Command name = "Reset LED color difference count"
+Command Description = "Sets the number of found mismatches in pixel colors (see ?RRGGBB operand description) to specific values to zero"
+Command Stackable = No
+Command Start text= "M45"
+
+
+Group:
+Command group = "Timing"
+Group name = "Delays"
+Required toggle = none
+Group description = "Controlling the pace of scenarios, i.e. when certain event should occur. Time is counted from the moment a scenario file is opened.'Subprogram' scenarios does not affect the timings)"
+
+Command:
+Command name = "Update outputs and continue"
+Command Description = "Updates LED and drive outputs and continue reading scenario file"
+Command Stackable = Yes
+Command Start text= "G4"
+
+Command:
+Command name = "Continue reading scenario"
+Command Description = "Continues reading the scenario file if it was paused"
+Command Stackable = Yes
+Command Start text= "M24"
+
+Command:
+Command name = "Stops scenario"
+Command Description = "Pauses current scenario file execution till another file or Continue Reading is called externally"
+Command Stackable = Yes
+Command Start text= "M25"
+
+Command:
+Command name = "Interrupt relative pause"
+Command Description = "If scenario is timed based on interval durations between frames and other actions, this command halts current duration so next command can be executed immidiatelly"
+Command Stackable = Yes
+Command Start text= "G9"
+
+
+HCD Version = "0.5", "0.7"
+Group:
+Command group = "Communication"
+Group name = "Communication with other devices"
+Required toggle = none
+Group description = "Sending and receiving commands to/from other devices and setting dedicated parameters (like Baudrate for UARTs)" 
+
+Group:
+Command group = "File"
+Group name = "Files at controller"
+Required toggle = none
+Group description = "Managing scenario files in controller's memory"
+
+Group:
+Command group = "Fast Animation"
+Group name = "Faster animation"
+Required toggle = Fast Animation Checkbox, on
+Group description = "Commands that allows controller to play animations on the SPI (Smart) LEDs as fast as possible with update frequencies up to 2000 Hz. This is useful for stage special effetc like pixel pois and fast spinning props"
+
+Command:
+Command name = "Set amount of frames to play until stopped"
+Command Description = "Sets video sequence from memory (Fast Video sequence) in a state that it will be played until stopped from a button or another command. When amount of frames to play setting is in this mode, controller will continue reading and executing scenario file during playing video sequence to be able to perform other duties including stop playing the sequence in time"
+Command Stackable = Yes
+Command Start text= "G35P0"
+
+Command:
+Command name = "Stop playing Fast Video sequence"
+Command Description = "Interrupts playing video sequence from memory (Fast Video sequence). If there was finite amount of frames to play, this also triggers controller to continue reading and executing current scenario file"
+Command Stackable = Yes
+Command Start text= "G36P0"
+
+Command:
+Command name = "Start playing Fast Video sequence"
+Command Description = "Begins playing video sequence from memory (Fast Video sequence) according to previousely set frequency, amount of frames to play and other Fast Video parameters as soon as the next Output command (G4 or G6 commands) will be called. If this command called from a button, starts playing immedialtelly"
+Command Stackable = Yes
+Command Start text= "G36P1"
+
+
+Group:
+Command group = "Servo drive"
+Group name = "Drives and switches"
+Required toggle = Fast Animation Checkbox, off
+Group description = "Commands that allow to control servo drives or simple electric devices that are pulse width modulated or simply switches on and off. Like drives, ordinary LED stripes and lights, smoking machines and so on"
+

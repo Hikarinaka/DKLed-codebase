@@ -1,0 +1,12 @@
+;fast video demo script
+;setting the picture - 8 outputs, 8 pixels per output per frame, solid color
+S01234567 P FF0000 >>>>>>> 00FF00 >>>>>>> 0000FF >>>>>>> L >>>>>>> FFFF00 >>>>>>> FF00FF >>>>>>> 00FFFF >>>>>>> L >>>>>>> 
+G30N1600
+G31P8
+G32P8
+M96Q3 G35P640
+M86Q0P12
+M96Q1 G30 P+60
+M96Q2 G30 P-60
+G37 I A000
+U0TP\nFast Video\nStart: Button 3\nFreq: buttons 1&2\n

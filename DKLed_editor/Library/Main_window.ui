@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>646</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QTabWidget" name="Main_Tabs">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="Controller_Tab">
+       <attribute name="title">
+        <string>Controllers</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      </widget>
+      <widget class="QWidget" name="ProjectLayout_Tab">
+       <attribute name="title">
+        <string>Layout</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="Tab2horizontalLayout"/>
+      </widget>
+      <widget class="QWidget" name="ScreenEdit_Tab">
+       <attribute name="title">
+        <string>Screens</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="ScreenEditLayout"/>
+      </widget>
+      <widget class="QWidget" name="FileStructure_Tab">
+       <attribute name="title">
+        <string>Scenario</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="ScenarioLayout"/>
+      </widget>
+      <widget class="QWidget" name="Timeline_tab">
+       <attribute name="title">
+        <string>Timeline</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Commands</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QFrame" name="Command_page">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>11</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetMinimumSize</enum>
+             </property>
+             <item>
+              <widget class="QPushButton" name="Command_Add_Button">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>View command</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetMinimumSize</enum>
+             </property>
+             <item>
+              <widget class="QComboBox" name="Command_Ver">
+               <property name="minimumSize">
+                <size>
+                 <width>70</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>70</width>
+                 <height>25</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="Command_Section">
+               <property name="minimumSize">
+                <size>
+                 <width>200</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>400</width>
+                 <height>25</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QComboBox" name="Command_itself">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="Command_browser">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="acceptRichText">
+              <bool>false</bool>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>646</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Menu">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="FileMenuActionNew_Project"/>
+    <addaction name="FileMenuActionOpen_project"/>
+    <addaction name="FileMenuActionOpen_Recent"/>
+    <addaction name="separator"/>
+    <addaction name="FileMenuActionSave_Project"/>
+    <addaction name="FileMenuActionSave_Project_as"/>
+    <addaction name="separator"/>
+    <addaction name="FileMenuActionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <widget class="QMenu" name="menuTips">
+     <property name="title">
+      <string>Tips and Hints</string>
+     </property>
+     <addaction name="TipsActionEverything"/>
+     <addaction name="TipsActionMajor"/>
+     <addaction name="TipsActionMost_elaborate"/>
+     <addaction name="TipsActionDisabled"/>
+    </widget>
+    <addaction name="menuTips"/>
+   </widget>
+   <widget class="QMenu" name="menuAssets">
+    <property name="title">
+     <string>Assets</string>
+    </property>
+    <widget class="QMenu" name="menuControllers">
+     <property name="title">
+      <string>Controllers</string>
+     </property>
+     <addaction name="actionCreateControllerTemplate"/>
+     <addaction name="actionEditControllerTemplate"/>
+    </widget>
+    <widget class="QMenu" name="menuCommands">
+     <property name="title">
+      <string>Commands</string>
+     </property>
+     <addaction name="actionCreateCommand"/>
+     <addaction name="actionEditCommand"/>
+    </widget>
+    <addaction name="menuControllers"/>
+    <addaction name="menuCommands"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menu_Menu"/>
+   <addaction name="menuAssets"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="FileMenuActionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="FileMenuActionNew_Project">
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="FileMenuActionOpen_project">
+   <property name="text">
+    <string>Open project</string>
+   </property>
+  </action>
+  <action name="FileMenuActionSave_Project">
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </action>
+  <action name="FileMenuActionSave_Project_as">
+   <property name="text">
+    <string>Save Project as</string>
+   </property>
+  </action>
+  <action name="FileMenuActionOpen_Recent">
+   <property name="text">
+    <string>Open Recent</string>
+   </property>
+  </action>
+  <action name="TipsActionEverything">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Everything</string>
+   </property>
+  </action>
+  <action name="TipsActionMajor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Major</string>
+   </property>
+  </action>
+  <action name="TipsActionMost_elaborate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Most Elaborate</string>
+   </property>
+  </action>
+  <action name="TipsActionDisabled">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Disabled</string>
+   </property>
+  </action>
+  <action name="actionCreateControllerTemplate">
+   <property name="text">
+    <string>Create</string>
+   </property>
+  </action>
+  <action name="actionEditControllerTemplate">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionCreateCommand">
+   <property name="text">
+    <string>Create</string>
+   </property>
+  </action>
+  <action name="actionEditCommand">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

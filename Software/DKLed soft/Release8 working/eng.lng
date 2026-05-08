@@ -1,0 +1,73 @@
+btnActions	Events
+btnAdd	Add
+btnAddImage	Add image
+btnClearImage	Clear
+btnCompile	Compile
+btnCompileAndView	Compile and emulate
+btnCopyText	Copy to clipboard
+btnCreateMiddle	Create middlecolored image
+btnDuplicate	Duplicate
+btnLoop	Loop animation
+btnMoveLeft	Move left
+btnMoveRigth	Move right
+btnNew	New
+btnOk	Ok
+btnOpen	Open
+btnRemove	Remove selected
+btnRemoveImages	Remove image(s)
+btnSave	Save
+btnSaveAs	Save as...
+btnSaveHCD	Save compiled file
+btnSettings	Settings
+btnSplit	Split image
+chUseGamma	Use gamma correction
+Form1	SAPR vision generator
+frmTActions	Events
+frmAddImages	Add image
+frmSettings	Settings
+groupBaseChanel	Base chanel
+groupComponentsType	Components type
+groupImageSize	Images size
+groupPause	Pause
+groupSplitImages	Split images
+labBright	Brightness
+labByX	by X
+labByY	by Y
+labContrast	Contrast
+labHeight	Height
+labHeight_	Height:
+labImageMoving	Move selected images:
+lablWantRestart	Want restart program
+labMills	Mills
+labPause_	Pause:
+labPort	Port
+labWidth	Width
+labWidth_	Width:
+mnuPrevSizes	Preview size
+rbCompList	Images list
+rbCompTimeLine	Time line
+SplitForm	Split
+tabInterfaceSettings	Interface
+tabGammaCorrection	Gamma correction
+toolDirection	direction1
+toolDirection	direction2
+toolDirection	direction3
+toolDirectionLR	Left-to-right
+toolDirectionLRRL	Zigzag, from left
+toolDirectionRL	right-to-left
+toolDirectionRLLR	Zigzag, from right
+labBtnNumber	Button number
+chKeyDown	Do when pressed
+labFileName	Start file
+rNoAction	Stop
+rLoopAction	Loop
+rFileAction	Start file
+colBtnNumber	Button
+colBtnDown	Do when pressed
+colFileName	File name
+groupButtonEvents	Button events
+groupActionByEnd	When anim finished
+btnCancel	Cancel
+groupSelectLang	Select language
+tabHardware	Hardware
+groupLedType	LED type

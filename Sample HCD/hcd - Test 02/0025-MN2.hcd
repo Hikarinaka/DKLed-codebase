@@ -1,0 +1,72 @@
+
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 00ff11 > ggg ggg 00ff11 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 00dd33 > ggg ggg 00dd33 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 00bb55 > ggg ggg 00bb55 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 009977 > ggg ggg 009977 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 007799 > ggg ggg 007799 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 0055aa > ggg ggg 0055aa > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 0033dd > ggg ggg 0033dd > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 0011ff > ggg ggg 0011ff > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 0000dd > ggg ggg 0000dd > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 0000aa > ggg ggg 0000aa > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 000099 > ggg ggg 000099 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 000077 > ggg ggg 000077 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 000055 > ggg ggg 000055 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 000033 > ggg ggg 000033 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 000022 > ggg ggg 000022 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 000011 > ggg ggg 000011 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P+10
+G4 p40
+M89 P 0015
+S0P gggggggg gggggggg gggggggg ggg 880000 > ggg ggg 880000 > ggg gggggggg gggggggg gggggggg
+G0 Q567 P0
+G4 p40
+M47
+
+
